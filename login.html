@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | ResolveIt</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="logo">ResolveIt</a>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="process.html">Process</a>
+        <a href="login.html" class="here">Login</a>
+        <a href="submit.html">Submit</a>
+        <a href="track.html">Track</a>
+        <a href="recent.html">Recent</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="step-label">Page 3 of 7</p>
+    <h1>Login or register</h1>
+    <p class="intro">Sign in to your account, or create a new one.</p>
+
+    <div class="tabbed">
+      <input type="radio" name="auth-tab" id="tab-login" class="tab-input" checked>
+      <input type="radio" name="auth-tab" id="tab-register" class="tab-input">
+
+      <div class="tabs">
+        <label for="tab-login">Login</label>
+        <label for="tab-register">Register</label>
+      </div>
+
+      <!-- Login -->
+      <form class="login-form" action="#" onsubmit="return false;">
+        <label for="login-role">Login as</label>
+        <select id="login-role">
+          <option>Complainant</option>
+          <option>Staff / Officer</option>
+          <option>Administrator</option>
+        </select>
+
+        <label for="login-email">Email or phone</label>
+        <input type="text" id="login-email">
+
+        <label for="login-pass">Password</label>
+        <input type="password" id="login-pass">
+
+        <label class="inline"><input type="checkbox"> Remember me</label>
+
+        <button type="submit">Login</button>
+        <p><a href="#">Forgot password?</a></p>
+      </form>
+
+      <!-- Register -->
+      <form class="register-form" action="#" onsubmit="return false;">
+        <label for="reg-name">Full name</label>
+        <input type="text" id="reg-name">
+
+        <label for="reg-email">Email</label>
+        <input type="text" id="reg-email">
+
+        <label for="reg-phone">Mobile number</label>
+        <input type="text" id="reg-phone">
+
+        <label for="reg-pass">Password</label>
+        <input type="password" id="reg-pass">
+
+        <label for="reg-pass2">Confirm password</label>
+        <input type="password" id="reg-pass2">
+
+        <label class="inline"><input type="checkbox"> I agree to the terms of use</label>
+
+        <button type="submit">Create account</button>
+      </form>
+    </div>
+
+    <p class="note">This is a demo. Nothing is saved or checked yet.</p>
+
+    <div class="pager">
+      <a href="process.html"> Previous: Process</a>
+      <a href="submit.html">Next: Submit </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"> 2026 ResolveIt</div>
+  </footer>
+
+</body>
+</html>

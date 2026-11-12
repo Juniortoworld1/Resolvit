@@ -1,0 +1,106 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+a { color: #1a56c4; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+/*Header*/
+.site-header { border-bottom: 1px solid #ccc; padding: 16px 0; }
+.site-header .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; }
+.logo { font-weight: bold; font-size: 1.2rem; color: #222; text-decoration: none; }
+.menu a { margin-left: 14px; font-size: 0.95rem; }
+.menu a.here { font-weight: bold; text-decoration: none; color: #222; }
+
+/* Content */
+main { padding: 30px 0 10px; }
+h1 { font-size: 1.7rem; margin: 0 0 8px; }
+h2 { font-size: 1.2rem; margin: 28px 0 8px; }
+.step-label { color: #777; font-size: 0.9rem; margin: 0 0 6px; }
+.intro { color: #555; margin-bottom: 24px; }
+
+ol.plain, ul.plain { padding-left: 20px; }
+ol.plain li, ul.plain li { margin-bottom: 8px; }
+
+/* Forms */
+label { display: block; margin: 14px 0 4px; font-weight: bold; font-size: 0.95rem; }
+input[type="text"], input[type="password"], select, textarea {
+  width: 100%;
+  padding: 9px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #999;
+  background: #fff;
+}
+input[type="file"] { font-size: 0.95rem; }
+.inline { display: flex; align-items: center; gap: 8px; font-weight: normal; }
+.inline input { width: auto; }
+
+button, .button {
+  display: inline-block;
+  padding: 9px 20px;
+  margin-top: 18px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #fff;
+  background: #1a56c4;
+  border: 1px solid #1a56c4;
+  cursor: pointer;
+  text-decoration: none;
+}
+button.small { margin-top: 0; padding: 6px 12px; font-size: 0.9rem; }
+button.secondary { color: #1a56c4; background: #fff; }
+
+.note { margin-top: 16px; padding: 10px 12px; border: 1px solid #ccc; background: #f7f7f7; font-size: 0.93rem; }
+.error { color: #b00020; margin-top: 10px; min-height: 1.2em; }
+
+/* Tabs on the login page (no JavaScript) */
+.tab-input { position: absolute; opacity: 0; pointer-events: none; }
+.tabs { display: flex; gap: 0; border-bottom: 1px solid #999; margin-bottom: 10px; }
+.tabs label { margin: 0; padding: 8px 18px; border: 1px solid transparent; cursor: pointer; font-weight: normal; }
+#tab-login:checked ~ .tabs label[for="tab-login"],
+#tab-register:checked ~ .tabs label[for="tab-register"] {
+  border: 1px solid #999;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+  font-weight: bold;
+}
+#tab-login:checked ~ .register-form { display: none; }
+#tab-register:checked ~ .login-form { display: none; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { text-align: left; padding: 8px; border: 1px solid #ccc; font-size: 0.95rem; }
+th { background: #f0f0f0; }
+.table-scroll { overflow-x: auto; }
+
+/* Tracker result */
+.result { margin-top: 24px; border: 1px solid #ccc; padding: 18px; }
+.result h2 { margin-top: 0; }
+.meta { color: #666; font-size: 0.9rem; margin: 0 0 12px; }
+.progress { list-style: none; padding: 0; margin: 14px 0; }
+.progress li { padding: 6px 0 6px 26px; position: relative; color: #888; }
+.progress li::before { content: "\25CB"; position: absolute; left: 0; }
+.progress li.done { color: #222; }
+.progress li.done::before { content: "\2713"; color: #1b7f4b; font-weight: bold; }
+.progress li.current { color: #1a56c4; font-weight: bold; }
+.progress li.current::before { content: "\25CF"; color: #1a56c4; }
+.log { padding-left: 18px; font-size: 0.93rem; }
+.stars button { margin: 0 2px 0 0; padding: 2px 8px; font-size: 1.3rem; color: #bbb; background: #fff; border: 1px solid #ccc; }
+.stars button.on { color: #e09b00; }
+
+/* Previous / next */
+.pager { display: flex; justify-content: space-between; margin: 40px 0 0; padding: 16px 0; border-top: 1px solid #ccc; }
+
+.site-footer { border-top: 1px solid #ccc; padding: 18px 0; color: #777; font-size: 0.9rem; }
+
+@media (max-width: 520px) {
+  .menu a { margin: 0 12px 0 0; }
+}

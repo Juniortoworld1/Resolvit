@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Complaint | ResolveIt</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="logo">ResolveIt</a>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="process.html">Process</a>
+        <a href="login.html">Login</a>
+        <a href="submit.html" class="here">Submit</a>
+        <a href="track.html">Track</a>
+        <a href="recent.html">Recent</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="step-label">Page 4 of 7</p>
+    <h1>Submit a complaint</h1>
+    <p class="intro">Fields marked * are required.</p>
+
+    <form id="complaintForm" action="#">
+      <label for="name">Full name *</label>
+      <input type="text" id="name">
+
+      <label for="contact">Email or phone *</label>
+      <input type="text" id="contact">
+
+      <label for="category">Category *</label>
+      <select id="category">
+        <option value="">Select a category</option>
+        <option>Water supply</option>
+        <option>Roads and infrastructure</option>
+        <option>Electricity</option>
+        <option>Sanitation</option>
+        <option>Staff conduct</option>
+        <option>Other</option>
+      </select>
+
+      <label for="priority">Priority</label>
+      <select id="priority">
+        <option>Normal</option>
+        <option>High</option>
+        <option>Urgent</option>
+      </select>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" placeholder="Street, area or landmark">
+
+      <label for="details">Description *</label>
+      <textarea id="details" rows="5"></textarea>
+
+      <label for="file">Supporting document (optional)</label>
+      <input type="file" id="file">
+
+      <label class="inline"><input type="checkbox"> Submit anonymously</label>
+
+      <button type="submit">Submit complaint</button>
+      <p class="error" id="formError" role="alert"></p>
+    </form>
+
+    <div class="note" id="done" hidden>
+      Your complaint has been recorded (demo). Your tracking ID is
+      <strong id="newId"></strong>.
+      <a href="track.html">Go to the tracking page</a>.
+    </div>
+
+    <div class="pager">
+      <a href="login.html"> Previous: Login</a>
+      <a href="track.html">Next: Track </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"> 2026 ResolveIt. Demo project.</div>
+  </footer>
+
+  
+
+</body>
+</html>
